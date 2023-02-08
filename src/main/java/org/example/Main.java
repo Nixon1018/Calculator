@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-abstract class   calculator
+abstract class   Calculator
 {
     abstract void calculateadd (int a);
     abstract void calculatesub (int a);
@@ -19,7 +19,7 @@ abstract class   calculator
         this.value=value;
     }
 }
-class Methods extends calculator
+class Methods extends Calculator
 {
     void calculateadd(int a)
     {
@@ -45,7 +45,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int l=1;
-        calculator c = new Methods();
+        Calculator c = new Methods();
 
         do
         {
@@ -67,7 +67,7 @@ public class Main {
                 }
                 else if(v==2)
                 {
-                    logger.info("Enter the next value:");
+                    logger.info("Enter the value:");
                     int a = sc.nextInt();
                     c.calculatesub(a);
                     String z="Result:"+c.getvalue();
@@ -78,15 +78,15 @@ public class Main {
                     logger.info("Enter the next value:");
                     int a = sc.nextInt();
                     c.calculatemul(a);
-                    String z="Result:"+c.getvalue();
+                    String z="Res:"+c.getvalue();
                     logger.info(z);
                 }
                 else if(v==4)
                 {
-                    logger.info("Enter the next value:");
+                    logger.info("Enter the  value:");
                     int a = sc.nextInt();
                     c.calculatediv(a);
-                    String z="Result:"+c.getvalue();
+                    String z="Res:"+c.getvalue();
                     logger.info(z);
                 }
                 else if(v==5)
